@@ -51,7 +51,7 @@ class getLinkFromFile():
     def __int__(self):
         pass
 
-    def getDownloadLink(self):
+    def getShareLink(self):
         file = "DOUYINHAO_SHARE_URL"
 
         all=[]
@@ -59,11 +59,8 @@ class getLinkFromFile():
         for line in f_read.readlines():
             all.append(line.replace("\n",""))
 
-
-        file_path = '/Users/didi/PycharmProjects/douyin+youtube/QR_CODE_PIC/Camera'
-
+        file_path = os.path.join(os.getcwd(),'QR_CODE_PIC/Camera')
         f_write = open(file, "a+")
-
 
         for line in os.listdir(file_path):
             if ".png" in line:
@@ -85,7 +82,7 @@ if __name__ == "__main__":
     #print(qr_code.getLinkFromPic(pytfile_path))
     #qr_code.getAllLink()
     kk = getLinkFromFile()
-    kk.getDownloadLink()
+    kk.getShareLink()
 
 
 

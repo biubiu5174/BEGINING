@@ -323,5 +323,8 @@ class PullFileFromPhone():
 
 
 if __name__ == '__main__':
-    action = Action()
-    action.getDouyinHaoSharePic()
+    #action = Action()
+    #action.getDouyinHaoSharePic()
+    pull = PullFileFromPhone()
+    pull.getPicFromPhone()
+
